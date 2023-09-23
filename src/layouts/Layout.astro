@@ -1,0 +1,57 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="font-sans">
+    <slot />
+  </body>
+</html>
+<style is:global>
+  @config "../../tailwind.config.cjs";
+  @font-face {
+    font-family: 'Roboto-Medium';
+    src: url('/fonts/Roboto/Roboto-Medium.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: 'Roboto-Light';
+    src: url('/fonts/Roboto/Roboto-Light.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: 'Roboto-Regular';
+    src: url('/fonts/Roboto/Roboto-Regular.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('/fonts/OpenSans/OpenSans-Regular.ttf') format('ttf');
+  }
+  @font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: url('/fonts/OpenSans/OpenSans-SemiBold.ttf') format('ttf');
+  }
+  .paragraph {
+    font-family: Roboto;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 153.846% */
+    text-transform: capitalize;
+  }
+
+  html {
+    color: theme('colors.black');
+  }
+</style>

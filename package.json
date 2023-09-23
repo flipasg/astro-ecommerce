@@ -2,6 +2,7 @@
   "name": "astro-ecommerce",
   "type": "module",
   "version": "0.0.1",
+  "proxy": "http://localhost:3001",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
