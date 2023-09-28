@@ -1,9 +1,164 @@
 ---
+import { Image } from "astro:assets";
+import Image1 from "../assets/icons/search.svg"
+import Logo from "../assets/icons/logo.svg"
+import Image2 from "../assets/icons/person.svg"
+import Image3 from "../assets/icons/cart.svg"
+import Image4 from "../assets/images/model.svg";
+import Image5 from "../assets/images/rectangle.svg";
+import Image6 from "../assets/images/flower-pattern.png";
 
 const props = Astro.props;
 ---
+<header class="hero">
+    <section class="hero__header">
+        <Image src={Image1} alt="imagen de búsqueda" class="hero__header__img" />
+        <Image src={Logo} alt="imagen de logo" class="hero__header__logo"/>
+        <div class="hero__header__section">
+            <div class="hero__header__section">
+                <Image src={Image2} alt="imagen de búsqueda" class="hero__header__img"/>
+                <a href="#" class="hero__header__a">Account</a>
+            </div>
+            <div class = "hero__header__section">
+                <Image src={Image3} alt="imagen de búsqueda" class="hero__header__img"/>
+                <a href="#" class="hero__header__a">Shopping</a>
+            </div>
+        </div>
+    </section>
+    <div class="hero__separation">
+    </div>
+    <section >
+        <div class="hero__options">
+            <a href="#">Jewelery & Accesories</a>
+            <a href="#">Clothing & Shoes</a>
+            <a href="#">Home & Living</a>
+            <a href="#">Wedding & Party</a>
+            <a href="#">Toys and Entretainment</a>
+            <a href="#">Art and Collectibles</a>
+            <a href="#">Craft Supplies and Tools</a>
+        </div>
+    </section>
+</header>
 
-<div>
-</div>
+<section class="hero__content">
+    <div class="hero__content__text">
+        <h1 class="hero__content__text__h1">Collections</h1>
+        <h3 class="hero__content__text__h3">You Can Explore Evert Shop And Many Different Collections From Varius Brands! </h3>
+        <button class="hero__content__text__button"> <Image src={Image3} alt="cart" />Shop now</button>
+    </div>
+    <div class="hero__content__images">
+        <Image src={Image4} alt="model image"></Image>
+        <Image src={Image5} alt="model image decoration"></Image>
+    </div >
+    <Image src={Image6} alt="section flowers" class="hero__decoration"></Image>
+</section>
+
 <style>
+
+    @font-face {font-family: 'Roboto-Medium'; src: url('/fonts/Roboto/Roboto-Medium.ttf') format('ttf'); }
+
+    body{
+        background-color: rgba(30, 40, 50, 0.05);
+        height: 847px;
+        font-family: "Roboto-medium", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .hero{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; 
+    }
+
+    .hero__header{
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+
+    .hero__header__section{
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero__header__img{
+        display: flex;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .hero__header__a{
+        margin-right: 10px;
+    }
+
+    .hero__options{
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+        font-size: 13px;
+        font-weight: 400;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .hero__separation{
+        margin: 0;
+        padding: 0;
+        height: 30px;
+        margin: 0 auto;
+        margin-top: 15px;
+        border-top: 2px solid #E3E3E3;
+        width: 70%;
+    }
+
+    .hero__content{
+        position: absolute;
+        top: 245px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .hero__content {
+        display: flex;
+        align-items: center;
+    }
+
+    .hero__content__text {
+        flex: 1; 
+    }
+
+    .hero__content__text__h1{
+        color: #000;
+        font-family: 'Roboto', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 74px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 55px;
+        text-transform: capitalize;
+    }
+
+    .hero__content__text__h3{
+        font-family: Roboto;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 55px; 
+        text-transform: capitalize;
+    }
+
+    .hero__content__images {
+        flex: 1; 
+        display: flex;
+        justify-content:
+    }
+
+    .hero__decoration {
+        position: absolute;
+        right: -20px; 
+    }
+
+
 </style>
